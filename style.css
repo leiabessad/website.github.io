@@ -9,6 +9,8 @@ body {
     background-color: #f0f0f0;
 }
 
+
+
 body, #desktop {
     margin: 0;
     padding: 0;
@@ -156,8 +158,6 @@ body, #desktop {
 
 
 
-
-
 /* Rectangle rayé */
 #striped-box {
     position: fixed;
@@ -180,7 +180,7 @@ body, #desktop {
 
 .playlist {
     flex: 1;
-    background: repeating-linear-gradient(0deg, #ddd 100px, #ddd 5px, #e0e0e0 5px, #e0e0e0 100%);
+    background: white;
     background-size: 20px 100%;
     display: flex;
     align-items: center;
@@ -210,21 +210,119 @@ color: #f0f0f0;
     font-size: 18px;
     cursor: pointer;
     color: #ffffff;
-    background: #ff95cc;
+    background: #ffb2da;
     border-bottom: 1px solid rgb(255, 64, 159);
 }
 
 
-
 .hidden {
-    display: none;
+    display: none; /* Assurer que la boîte est cachée */
 }
 
 
-  
+.boite {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    background: 333;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+   /* display: none;*/
+}
+
+.music-player {
+    background: #ffffff; /* Change la couleur pour qu'elle soit visible */
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+    display: block;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+nav .circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: #ff95cc;
+    border: 2px solid #ffb2da;
+}
+
+.song-img{
+    width: 220px;
+    border-radius: 3px;
+    border: 3px solid #ffb2da;
+}
 
 
+.music-player h1{
+        font-size: 22px;
+        padding-top: 10px;
+        padding-bottom: 2px;
+        color: #333;
+    }
 
-.hidden {
-    display: none; /* Assurer que la boîte est cachée */
+.music-player p{
+    font-size: 16px;
+    color: #333;
+}
+
+
+#progress{
+   -webkit-appearance: none; 
+   width: 100%;
+   height: 6px;
+   background: #ffc0e0;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-top: 20px;
+   margin-bottom: 15px;
+
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none; 
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #ff95cc;
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.controls div{
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+    background: #ff95cc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.controls div:nth-child(2) {
+    transform: scale(1.5);
+    background: #ff95cc;
+    color: #fff;
 }

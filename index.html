@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - Bureau</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6482fa513.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="desktop">
@@ -56,31 +57,54 @@
             </div>
         </div>
 
-        <div class="container">
-            <button class="btn" onclick="openPopup()">Ouvrir Popup</button>
-            <div class="popup" id="popup">
-                <h2>Popup</h2>
-                <p>Voici un popup fonctionnel !</p>
-                <button class="close-btn" onclick="closePopup()">Fermer</button>
-            </div>
-        </div>
+        
         
         <div id="striped-box" class="hidden modal">
             <div class="close-btn" id="closeBtn">✖</div>
             <div class="playlist" data-message="Chanson 1 sélectionnée">ABBA - The winner takes it all</div>
             <div class="playlist" data-message="Chanson 2 sélectionnée">Billie Eilish - </div>
+            <div class="playlist" data-message="Chanson 8 sélectionnée">Christophe - Aline</div>
             <div class="playlist" data-message="Chanson 3 sélectionnée">Lady Gaga - Bad Romance</div>
-            <div class="playlist" data-message="Chanson 4 sélectionnée">Lana Del Rey - Summertie Sadness</div>
+            <div class="playlist" data-message="Chanson 4 sélectionnée">Lana Del Rey - Summertime Sadness</div>
             <div class="playlist" data-message="Chanson 5 sélectionnée">Ravyn Lenae - Love Me Not</div>
             <div class="playlist" data-message="Chanson 6 sélectionnée">Smash Mouth - All Star</div>
+            <div class="playlist" data-message="Chanson 5 sélectionnée">Tame Impala - The Less I Know The Better</div>
             <div class="playlist" data-message="Chanson 7 sélectionnée">Theodora - FNG</div>
-            <div class="playlist" data-message="Chanson 8 sélectionnée">Chanson 4</div>
-            <div class="playlist" data-message="Chanson 5 sélectionnée">Chanson 5</div>
-            <div class="playlist" data-message="Chanson 5 sélectionnée">Chanson 5</div>
+            <div class="playlist" data-message="Chanson 5 sélectionnée">Phoebe Bridgers - Scott Street</div>
             <div class="playlist" data-message="Chanson 3 sélectionnée">Zola Jesus - </div>
+        </div>
+
+        <div class="boite">
+            <div class="music-player">
+                <nav>
+                   <div class="circle">
+                        <i class="fa-solid fa-chevron-left"></i>
+                   </div> 
+                   <div class="circle">
+                    <i class="fa-solid fa-bars"></i>               </div> 
+                </nav>
+                <img src="photo/playlist/ABBA.png" class="song-img">
+                <h1>The Winner Takes It All</h1>
+                <p>ABBA</p>
+
+                <audio  id="song"> 
+                    <source src="son/ABBA.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress" >
+
+                <div class="controls">
+                    <div> <i class="fa-solid fa-backward"></i> </div>
+                       <div onclick="playPause()"> <i class="fa-solid fa-play" id="ctrlIcon"></i> </div>
+                        <div> <i class="fa-solid fa-forward"></i> </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         
 
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 </html>
