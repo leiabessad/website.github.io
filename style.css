@@ -21,12 +21,13 @@ body, #desktop {
     width: 100%;
     height: 100vh;  /* Hauteur complète de la fenêtre */
     background-color: #f4f4f4;
-    background-image: url('fondecran.jpg');
+    background-image: url('photo/fondecran.png');
     background-size: cover;  /* Prend tout l'écran sans déformer */
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;  /* Empêche le défilement si l'image est plus grande */
 }
+
 
 
 /* Vignette individuelle */
@@ -53,6 +54,7 @@ body, #desktop {
     height: auto;
     border-radius: 10px;
     max-height: 150px;
+    position: relative;
 }
 
 /* Texte à l'intérieur de la vignette */
@@ -107,59 +109,6 @@ body, #desktop {
 
 
 
-#modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    display: none;  /* Masquée par défaut */
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    max-width: 80vh;
-    height: 600px;
-    overflow-y: auto;
-    position: relative;
-}
-
-#close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.modal-videos video {
-    width: 100%;  /* Assurez-vous que la vidéo occupe la largeur disponible */
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.modal-images img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-#modal-description p {
-    font-size: 14px;
-    color: #333;
-    margin: 20px 0;
-}
-
-
 
 
 
@@ -179,6 +128,9 @@ body, #desktop {
     width: 100px;  /* Largeur de chaque vignette */
     height: auto;
     padding: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
 .Invariant img {
@@ -196,79 +148,83 @@ body, #desktop {
 }
 
 
-
-
-
-
-
-/* Styles spécifiques aux petits écrans (responsive) */
-
-/* Pour les écrans moyens (tablettes et petits écrans de bureau) */
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Colonnes plus petites */
-    }
-
-    .icon {
-        height: 180px;  /* Moins de hauteur pour les écrans moyens */
-        max-width: 120px;
-    }
-}
-
-/* Pour les très petits écrans (smartphones) */
-@media screen and (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr;  /* Une seule colonne sur les petits écrans */
-    }
-
-    .icon {
-        height: 160px;  /* Moins de hauteur pour les écrans très petits */
-        max-width: 100%;
-    }
-
-    .icon p {
-        font-size: 12px;  /* Texte encore plus petit */
-    }
-}
-
-
-
-
-
-
-.Invariant {
-    display: inline-block;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
 .Invariant:hover {
     transform: scale(1.05); /* Effet zoom au survol */
 }
 
 
 
-.container{
-    width: 100%;
-    height: 100vh;
-    background: #333;
+
+
+
+
+/* Rectangle rayé */
+#striped-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    border: 2px solid rgb(255, 64, 159);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(255, 64, 159);
+    display: none;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+
+
+.playlist {
+    flex: 1;
+    background: repeating-linear-gradient(0deg, #ddd 100px, #ddd 5px, #e0e0e0 5px, #e0e0e0 100%);
+    background-size: 20px 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(255, 64, 159);
 }
 
 
-.music-player{
-    background: #ffe0e5;
-    width: 400px;
-    padding: 25px 35px;
-    text-align: center;
+
+.playlist:hover {
+background: #ff95cc;
+color: #f0f0f0;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
 
+
+
+/* Style pour le bouton de fermeture */
+.close-btn {
+    position: top;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    text-align: right;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #ff95cc;
+    border-bottom: 1px solid rgb(255, 64, 159);
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+  
+
+
+
+.hidden {
+    display: none; /* Assurer que la boîte est cachée */
 }
