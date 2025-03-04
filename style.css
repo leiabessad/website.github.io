@@ -44,11 +44,10 @@ body, #desktop {
     overflow: hidden;
     background-color: none;
     transition: transform 0.2s ease-in-out;
-    width: 120px;
-    height: 200px;
+    width: 120px; /* Largeur de la vignette */
+    height: auto; /* Ajuster la hauteur automatiquement pour laisser place au texte */
+    padding-bottom: 10px; /* Ajoute un peu d'espace en bas pour le texte */
 }
-
-
 
 /* Image à l'intérieur de la vignette */
 .icon img {
@@ -61,16 +60,17 @@ body, #desktop {
 
 /* Texte à l'intérieur de la vignette */
 .icon p {
-    margin-top: 5px;
+    margin-top: 3px;
     color: #333;
     font-weight: bold;
     text-align: center;
     font-size: 14px;
     padding: 5px;
-    min-width: 150px;
-    white-space: nowrap;
-    display: inline-block;
-    overflow: visible;
+    min-width: 120px; /* Largeur minimale de texte */
+    white-space: normal; /* Permet au texte de se répartir sur plusieurs lignes */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+    display: block; /* Permet au texte de se mettre sur plusieurs lignes si nécessaire */
 }
 
 /* Effet de survol de la vignette */
@@ -90,7 +90,6 @@ body, #desktop {
     transition: transform 0.1s ease-out;
 }
 
-
 .icon:hover .hover-image {
     display: block;  /* Afficher l'image lorsque la souris survole la vignette */
 }
@@ -102,11 +101,11 @@ body, #desktop {
     pointer-events: none;
 }
 
-
-
 .hidden {
     display: none;
 }
+
+
 
 
 
@@ -391,6 +390,7 @@ nav .circle{
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
   }
   
   .modal-content {
@@ -398,7 +398,7 @@ nav .circle{
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
   }
 
   button {
@@ -426,6 +426,19 @@ nav .circle{
   .modal h1{
     color: #ff95cc;
     font-size: 16px;
+  }
+
+  .close-modal {
+    position: top;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    text-align: right;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #ffb2da;
+    border-bottom: 1px solid rgb(30, 58, 238);
   }
 
     
