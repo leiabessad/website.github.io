@@ -11,8 +11,10 @@
     <div id="desktop">
         <img src="photo/fondecran.png" id="background" alt="Fond d'écran">
 
+
+        <div class="icons"> 
         <div class="icon" data-project="project1">
-            <img src="photo/vignette.png" alt="Icon 1">
+            <img src="photo/vignette.png" alt="Projet 1" class="project-img" data-project="1">
             <p>Les Talentueux</p>
         </div>
 
@@ -39,11 +41,36 @@
             </div>
             <p>Steinkrebse</p>
         </div>
+    </div>
 
         <div class="icon" id="corbeille">
             <img src="photo/corbeille.png" alt="Corbeille">
             <p>Corbeille</p>
         </div>
+
+
+ <!-- Modal Finder-style -->
+ <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-title">Les Talentueux du Samu Social</h2>
+        <h1 id="modal-description">Activation réalisée dans le cadre du concours Mlle Pitch, édition 2025, en partenariat avec le Samu Social</h1>
+        <p id="modal-description">Voici les détails</p>
+        
+        <!-- Bouton qui redirige vers Talentueux.html -->
+        <button id="open-project">Ouvrir</button>
+        
+
+
+        <!-- Bouton de fermeture -->
+        <button class="close-modal">Fermer</button>
+    </div>
+</div>
+
+    
+
+
+
 
         <div id="invariant-container">
             <div class="Invariant">
@@ -58,10 +85,18 @@
         </div>
 
         
+        <div id="logo">
+            <img src="photo/miniature-project3.png" alt="Logo" />
+        </div>
+        
+
         
         <div id="striped-box" class="hidden modal">
             <div class="close-btn" id="closeBtn">✖</div>
-            <div class="playlist" data-message="Chanson 1 sélectionnée">ABBA - The winner takes it all</div>
+            <div class="playlist" data-message="Chanson 1 sélectionnée">ABBA - The winner takes it all
+
+
+            </div>
             <div class="playlist" data-message="Chanson 2 sélectionnée">Billie Eilish - </div>
             <div class="playlist" data-message="Chanson 8 sélectionnée">Christophe - Aline</div>
             <div class="playlist" data-message="Chanson 3 sélectionnée">Lady Gaga - Bad Romance</div>
@@ -72,36 +107,36 @@
             <div class="playlist" data-message="Chanson 7 sélectionnée">Theodora - FNG</div>
             <div class="playlist" data-message="Chanson 5 sélectionnée">Phoebe Bridgers - Scott Street</div>
             <div class="playlist" data-message="Chanson 3 sélectionnée">Zola Jesus - </div>
-        </div>
-
-        <div class="boite">
-            <div class="music-player">
-                <nav>
-                   <div class="circle">
-                        <i class="fa-solid fa-chevron-left"></i>
-                   </div> 
-                   <div class="circle">
-                    <i class="fa-solid fa-bars"></i>               </div> 
-                </nav>
-                <img src="photo/playlist/ABBA.png" class="song-img">
-                <h1>The Winner Takes It All</h1>
-                <p>ABBA</p>
-
-                <audio  id="song"> 
-                    <source src="son/ABBA.mp3" type="audio/mpeg">
-                </audio>
-                <input type="range" value="0" id="progress" >
-
-                <div class="controls">
-                    <div> <i class="fa-solid fa-backward"></i> </div>
-                       <div onclick="playPause()"> <i class="fa-solid fa-play" id="ctrlIcon"></i> </div>
-                        <div> <i class="fa-solid fa-forward"></i> </div>
+            <div class="boite">
+                <div class="music-player">
+                    <nav>
+                       <div class="circle">
+                            <i class="fa-solid fa-chevron-left"></i>
+                       </div> 
+                       <div class="circle">
+                        <i class="fa-solid fa-bars"></i>               </div> 
+                    </nav>
+                    <img src="photo/playlist/ABBA.png" class="song-img">
+                    <h1>The Winner Takes It All</h1>
+                    <p>ABBA</p>
+    
+                    <audio  id="song"> 
+                        <source src="son/ABBA.mp3" type="audio/mpeg">
+                    </audio>
+                    <input type="range" value="0" id="progress" >
+    
+                    <div class="controls">
+                        <div> <i class="fa-solid fa-backward"></i> </div>
+                           <div onclick="playPause()"> <i class="fa-solid fa-play" id="ctrlIcon"></i> </div>
+                            <div> <i class="fa-solid fa-forward"></i> </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
-
-
         </div>
+
+        
         
 
     <script src="script.js">
