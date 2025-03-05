@@ -69,16 +69,19 @@
         </div>
 
 
+
+        
  <!-- Modal Finder-style -->
  <div id="modal1" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h2 id="modal-title">Les Talentueux du Samu Social</h2>
-        <h1 id="modal-description">Activation réalisée dans le cadre du concours Mlle Pitch, édition 2025, en partenariat avec le Samu Social</h1>
-        <p id="modal-description">Voici les détails</p>
+                <h1 id="modal-description">Activation réalisée dans le cadre du concours Mlle Pitch, édition 2025, en partenariat avec le Samu Social</h1>
+                <p>Voici les détails du projet... Description plus détaillée ici !</p>
         
         <!-- Bouton qui redirige vers Talentueux.html -->
-        <button id="open-project">Ouvrir</button>
+        <button class="open-project" data-page="Talentueux.html">Ouvrir</button>
+        
         
 
 
@@ -88,18 +91,29 @@
 </div>
 
     
-<!-- Modal 2 -->
 <div id="modal2" class="modal">
     <div class="modal-content">
-      <span class="close-modal">&times;</span>  <!-- La croix pour fermer -->
-      <h2 id="modal-title">Ain't Your Mayo</h2>
-      <h1 id="modal-description">Activation réalisée dans le cadre du concours D&AD</h1>
-      <p id="modal-description">Voici les détails</p>
+      <!-- Ajouter une div pour le fond de la croix -->
+      <div class="modal-close-background">
+        <span class="close-modal">&times;</span>  <!-- La croix pour fermer -->
+      </div>
       
-      <!-- Bouton qui redirige vers Talentueux.html -->
-      <button id="open-project">Ouvrir</button>
+      <div class="modal-grid">
+        <!-- Partie gauche : Texte -->
+        <div class="modal-text">
+            <h2 id="modal-title">Ain't Your "Mayo"</h2>
+            <p id="modal-description">Activation réalisée dans le cadre du concours D&AD</p>
+            <br>
+            <button class="open-project" data-page="Hellmann.html">Ouvrir</button>
+        </div>
+
+        <!-- Partie droite : Image -->
+        <div class="modal-image">
+            <img src="photo/hellmannmini.JPG" alt="Projet Hellmann">
+        </div>
     </div>
-  </div>
+</div>
+</div>
 
 
   <!-- Modal 3 -->

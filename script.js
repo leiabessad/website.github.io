@@ -101,12 +101,17 @@ projectImages.forEach((image) => {
   });
 });
 
-// Sélectionner le bouton "Ouvrir"
-const openButton = document.getElementById('open-project');
-
-// Ajouter un événement click pour rediriger l'utilisateur
-openButton.addEventListener('click', () => {
-    window.location.href = 'Talentueux.html';  // Remplace 'Talentueux.html' par le nom de ta page
+// Sélectionne tous les boutons "Ouvrir" dans les modales
+document.querySelectorAll('.open-project').forEach(button => {
+    button.addEventListener('click', function () {
+        // Récupère l'URL stockée dans data-page
+        const pageUrl = this.getAttribute('data-page');
+        
+        // Redirige vers la page correspondante
+        if (pageUrl) {
+            window.location.href = pageUrl;
+        }
+    });
 });
 
 
@@ -138,6 +143,7 @@ window.onclick = function(event) {
 
 // Fonction qui change la direction de l'animation à chaque fin
 logo.addEventListener('animationiteration', randomDirection);
+
 
 // Démarre l'animation
 randomDirection();
